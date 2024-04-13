@@ -2,6 +2,8 @@
 
 //import 'dart:html';
 
+import 'dart:math';
+
 import 'package:english_words/english_words.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
@@ -18,17 +20,16 @@ void main() {
 class scav_quest_ui extends StatelessWidget {
   const scav_quest_ui({super.key});
 
-
+  
 
   @override
   Widget build(BuildContext context) {
+    ThemeData appTheme = ThemeData(          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),);
     return ChangeNotifierProvider(create: (context) => MyAppState(),
     child:MaterialApp(
         title: 'namer app',
-        theme: ThemeData(
-          useMaterial3: true,
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        ),
+        theme: appTheme,
         home: const HomePage(),
       ), 
     );
@@ -38,16 +39,14 @@ class scav_quest_ui extends StatelessWidget {
 class mystoryObj  {
   
   
-
-  
-  String name = "test";
+  String name = WordPair.random().first;
   String discription =  "testdes\ndwadwadwadwadawdwadwadwadwa\ndwadwadwadwa";
   bool status = false;
 
   String workout = "some Workout";
   String possibleLocation = "some Location";
   String itemOfInterest = "some item";
-  String clues = <String>[];
+  
   Widget get_clues()
   {
     return ListView(
@@ -241,7 +240,29 @@ class StatsPage extends StatelessWidget {
 
   return Scaffold(
     
-    body: Text("stat page"),);
+    body: ListView(
+      
+      children: <Widget>[
+        for(mystoryObj quest in appState.quests)
+
+        Column(
+          children: [
+            SizedBox(height: 2,),
+            Container(
+              height: 50,
+              color: Theme.of(context).colorScheme.primaryContainer,
+              child: Center(child: Text(quest.getName()))
+            ),
+          ],
+        ),
+
+
+
+
+      ],
+      
+
+    ),);
 
 
 
