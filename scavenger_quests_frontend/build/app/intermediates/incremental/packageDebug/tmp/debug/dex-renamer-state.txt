@@ -1,0 +1,4 @@
+#Sat Apr 13 09:29:53 CDT 2024
+base.0=C\:\\Users\\JAYSH\\OneDrive\\Documents\\GitHub\\Scavenger-Quest\\scavenger_quests_frontend\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

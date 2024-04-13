@@ -1,0 +1,1 @@
+ C:\\Users\\JAYSH\\OneDrive\\Documents\\GitHub\\Scavenger-Quest\\scavenger_quests_frontend\\.dart_tool\\flutter_build\\15e1833d06815287fa42ed45596b3d41\\native_assets.yaml: 
