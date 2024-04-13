@@ -47,6 +47,7 @@ class mystoryObj  {
   String workout = "some Workout";
   String possibleLocation = "some Location";
   String itemOfInterest = "some item";
+  
   //String clues = <String>[] as String;
   Widget get_clues()
   {
